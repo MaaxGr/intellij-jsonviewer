@@ -22,4 +22,9 @@
     <actions>
         <!-- Add your actions here -->
     </actions>
+
+    <change-notes>
+        Intellij plugin to format json to a human readable way.
+    </change-notes>
+
 </idea-plugin>
