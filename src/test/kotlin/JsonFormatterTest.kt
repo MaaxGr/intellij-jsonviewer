@@ -15,7 +15,6 @@ class JsonFormatterTest {
             }
         """.trimIndent()
 
-
         val formatter = JsonFormatter()
         val formattedString = formatter.format(testString)
 

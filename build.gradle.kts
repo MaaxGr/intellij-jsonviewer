@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.maaxgr.intellij"
-version = "1.0-SNAPSHOT"
+version = "1.0.4"
 
 repositories {
     mavenCentral()
@@ -29,10 +29,4 @@ tasks.test {
     useJUnit()
 
     maxHeapSize = "1G"
-}
-
-tasks.getByName<org.jetbrains.intellij.tasks.PatchPluginXmlTask>("patchPluginXml") {
-    changeNotes("""
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>""")
 }

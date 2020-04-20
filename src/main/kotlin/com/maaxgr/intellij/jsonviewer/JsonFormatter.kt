@@ -10,7 +10,11 @@ class JsonFormatter {
         private val REMOVE_INDENT_TRIGGERS = arrayOf(']', '}')
     }
 
-    fun format(json: String) = formatResettedString(resetString(json))
+    fun format(json: String) = linuxNewlines(formatResettedString(resetString(json)))
+
+    fun linuxNewlines(json: String): String {
+        return json.replace(Regex("\\r\\n|\\r|\\n"), "\n")
+    }
 
     fun resetString(json: String): String {
         if (json.isEmpty()) {
@@ -72,7 +76,7 @@ class JsonFormatter {
                         return
                     }
                     current == ',' -> {
-                        formattedText.appendln(current);
+                        formattedText.appendln(current)
                         appendIndent(formattedText, indentCount)
                         return
                     }
