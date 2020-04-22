@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.maaxgr.intellij.jsonviewer</id>
     <name>Json Viewer</name>
-    <vendor email="jsonviewer@maax.gr" url="https://maax.gr">MaaxGr</vendor>
+    <vendor email="jsonviewer@maax.gr" url="https://github.com/MaaxGr/">MaaxGr</vendor>
 
     <description><![CDATA[
     Transform Json strings into a human readable format

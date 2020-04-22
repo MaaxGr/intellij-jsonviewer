@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.maaxgr.intellij"
-version = "1.0.4"
+version = "1.0.5"
 
 repositories {
     mavenCentral()
@@ -14,7 +14,6 @@ repositories {
 
 dependencies {
     testImplementation("junit", "junit", "4.12")
-    implementation("org.koin", "koin-core", "2.1.5")
 }
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/

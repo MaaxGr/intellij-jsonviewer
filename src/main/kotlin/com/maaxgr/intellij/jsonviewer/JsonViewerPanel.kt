@@ -3,6 +3,8 @@ package com.maaxgr.intellij.jsonviewer
 import com.google.gson.Gson
 import com.google.gson.JsonElement
 import com.google.gson.stream.MalformedJsonException
+import com.intellij.openapi.project.Project
+import com.intellij.openapi.wm.ToolWindow
 import com.maaxgr.intellij.jsonviewer.components.MEditor
 import com.maaxgr.intellij.jsonviewer.components.MSearch
 import java.awt.BorderLayout
@@ -14,7 +16,7 @@ import javax.swing.JLabel
 import javax.swing.JPanel
 
 
-class JsonViewerPanel : JPanel(BorderLayout()) {
+class JsonViewerPanel(project: Project, toolWindow: ToolWindow) : JPanel(BorderLayout()) {
 
     private val btnFormat: JButton
     private val lblError: JLabel
@@ -42,7 +44,8 @@ class JsonViewerPanel : JPanel(BorderLayout()) {
 
         //textarea in scroll pane
         editor = MEditor(
-            filterShortcutTriggered = ::handleFilterShortcutTriggered
+            filterShortcutTriggered = ::handleFilterShortcutTriggered,
+            project = project
         )
 
         search = MSearch(

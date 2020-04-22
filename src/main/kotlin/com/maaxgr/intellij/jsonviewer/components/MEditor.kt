@@ -19,17 +19,12 @@ import com.intellij.openapi.editor.impl.DocumentImpl
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.util.text.StringUtil
 import com.intellij.openapi.wm.IdeFocusManager
-import org.koin.core.KoinComponent
-import org.koin.core.get
-import org.koin.core.inject
 
 
 class MEditor(
-    val filterShortcutTriggered: (Boolean) -> Unit = {}
-) : KoinComponent {
-
-    //global
-    private val project: Project = get()
+    private val project: Project,
+    private val filterShortcutTriggered: (Boolean) -> Unit = {}
+) {
 
     //component
     private val editor = EditorFactory.getInstance().createEditor(DocumentImpl(""))
