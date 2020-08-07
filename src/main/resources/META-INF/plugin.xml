@@ -24,7 +24,7 @@
     </actions>
 
     <change-notes>
-        Intellij plugin to format json to a human readable way.
+        Update the jsonviewer to intellij newest release 2020.2
     </change-notes>
 
 </idea-plugin>
