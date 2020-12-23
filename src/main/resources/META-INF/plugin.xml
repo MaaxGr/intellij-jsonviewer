@@ -24,7 +24,7 @@
     </actions>
 
     <change-notes>
-        Update the jsonviewer to intellij newest release 2020.2
+        Update plugin to intellij 2020.3
     </change-notes>
 
 </idea-plugin>

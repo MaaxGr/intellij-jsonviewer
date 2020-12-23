@@ -9,9 +9,8 @@ import com.intellij.ui.content.ContentFactory
 class JsonViewerToolWindow : ToolWindowFactory {
 
     override fun createToolWindowContent(project: Project, toolWindow: ToolWindow) {
-        println("Create tool window")
         val contentFactory = ContentFactory.SERVICE.getInstance()
-        val content = contentFactory.createContent(JsonViewerPanel(project, toolWindow), "", false)
+        val content = contentFactory.createContent(JsonViewerPanel(project), "", false)
 
         toolWindow.contentManager.addContent(content)
     }

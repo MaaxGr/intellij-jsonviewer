@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.maaxgr.intellij"
-version = "1.0.6"
+version = "1.0.7"
 
 repositories {
     mavenCentral()
@@ -18,10 +18,15 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version = "2020.2"
+    version = "2020.3"
 }
+
 configure<JavaPluginConvention> {
     sourceCompatibility = JavaVersion.VERSION_1_8
+}
+
+tasks.buildSearchableOptions {
+    enabled = false
 }
 
 tasks.test {
