@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.maaxgr.intellij"
-version = "1.0.8"
+version = "1.0.9"
 
 repositories {
     mavenCentral()

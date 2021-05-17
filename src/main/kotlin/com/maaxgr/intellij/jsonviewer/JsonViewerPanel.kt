@@ -77,12 +77,9 @@ class JsonViewerPanel(project: Project) : JPanel(BorderLayout()) {
         editor.highlightText = text
     }
 
-    private fun handleFilterShortcutTriggered(state: Boolean) {
-        search.visible = state
-
-        if (state) {
-            search.focus()
-        }
+    private fun handleFilterShortcutTriggered() {
+        search.visible = true
+        search.focus()
     }
 
     private fun handleFormatClick() {

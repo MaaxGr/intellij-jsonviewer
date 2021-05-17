@@ -52,9 +52,13 @@ class MSearch(
         filterPanel.isVisible = false
         filterPanel.maximumSize = Dimension(filterPanel.maximumSize.width, 80)
 
-        val filterAction = EscapeHandler()
-        filterAction.registerCustomShortcutSet(
+        val escapeHandler = EscapeHandler()
+        escapeHandler.registerCustomShortcutSet(
             ActionManager.getInstance().getAction(IdeActions.ACTION_EDITOR_ESCAPE).shortcutSet,
+            searchTextField
+        )
+        escapeHandler.registerCustomShortcutSet(
+            ActionManager.getInstance().getAction(IdeActions.ACTION_FIND).shortcutSet,
             searchTextField
         )
     }

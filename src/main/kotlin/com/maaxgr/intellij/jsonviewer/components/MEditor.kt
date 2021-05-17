@@ -23,7 +23,7 @@ import com.intellij.openapi.wm.IdeFocusManager
 
 class MEditor(
     private val project: Project,
-    private val filterShortcutTriggered: (Boolean) -> Unit = {}
+    private val filterShortcutTriggered: () -> Unit = {}
 ) {
 
     //component
@@ -113,7 +113,7 @@ class MEditor(
         }
 
         override fun setSelected(e: AnActionEvent, state: Boolean) {
-            filterShortcutTriggered(state)
+            filterShortcutTriggered()
         }
     }
 
