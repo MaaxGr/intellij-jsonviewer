@@ -24,8 +24,7 @@
     </actions>
 
     <change-notes>
-        - Update plugin to intellij 2021.1
-        - Close search box with ctrl+f shortcut in search box
+        - Update plugin to intellij 2021.2
     </change-notes>
 
 </idea-plugin>
