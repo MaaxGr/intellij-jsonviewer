@@ -5,3 +5,7 @@ Intellij plugin to format json to a human readable way.
 
 ## Screencast
 ![screencast](docs/screencast.gif)
+
+## Jetbrains Marketplace
+
+<iframe frameborder="none" width="384px" height="319px" src="https://plugins.jetbrains.com/embeddable/card/14149"></iframe>
