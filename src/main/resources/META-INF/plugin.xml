@@ -4,7 +4,9 @@
     <vendor email="jsonviewer@maax.gr" url="https://github.com/MaaxGr/">MaaxGr</vendor>
 
     <description><![CDATA[
-    Transform Json strings into a human readable format
+    Transform Json strings into a human-readable format.
+    Format with `Alt+F` or click "Format".
+    Search in json with your search key (e.g. `Cltr+F`).
     ]]></description>
 
     <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
