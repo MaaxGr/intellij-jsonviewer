@@ -1,11 +1,11 @@
 plugins {
-    id("org.jetbrains.intellij") version "1.5.3"
-    java
-    kotlin("jvm") version "1.5.10"
+    id("org.jetbrains.intellij") version "1.10.0"
+    id("java")
+    kotlin("jvm") version "1.7.21"
 }
 
 group = "com.maaxgr.intellij"
-version = "1.0.13"
+version = "1.0.14"
 
 repositories {
     mavenCentral()
@@ -17,11 +17,11 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version.set("2022.1")
+    version.set("2022.2")
 }
 
 configure<JavaPluginConvention> {
-    sourceCompatibility = JavaVersion.VERSION_1_8
+    sourceCompatibility = JavaVersion.VERSION_17
 }
 
 tasks.buildSearchableOptions {
@@ -32,4 +32,10 @@ tasks.test {
     useJUnit()
 
     maxHeapSize = "1G"
+}
+
+buildscript {
+    repositories {
+        maven("https://www.jetbrains.com/intellij-repository/releases")
+    }
 }
