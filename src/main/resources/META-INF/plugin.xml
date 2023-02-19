@@ -29,4 +29,7 @@
         - Update plugin to intellij 2022.2
     </change-notes>
 
+    <!-- 2022.3 or higher -->
+    <idea-version since-build="223.7571" />
+
 </idea-plugin>
