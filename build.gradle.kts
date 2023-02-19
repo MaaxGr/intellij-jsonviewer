@@ -1,11 +1,11 @@
 plugins {
-    id("org.jetbrains.intellij") version "1.10.0"
+    id("org.jetbrains.intellij") version "1.13.0"
     id("java")
     kotlin("jvm") version "1.7.21"
 }
 
 group = "com.maaxgr.intellij"
-version = "1.0.14"
+version = "1.0.15"
 
 repositories {
     mavenCentral()
@@ -17,7 +17,7 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version.set("2022.2")
+    version.set("2022.3")
 }
 
 configure<JavaPluginConvention> {
