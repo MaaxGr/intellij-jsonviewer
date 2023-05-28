@@ -70,13 +70,13 @@ class JsonFormatter {
             if (!inValue) {
                 when {
                     ADD_INDENT_TRIGGERS.contains(current) -> {
-                        formattedText.appendln(current)
+                        formattedText.appendLine(current)
                         indentCount += 1
                         appendIndent(formattedText, indentCount)
                         return
                     }
                     current == ',' -> {
-                        formattedText.appendln(current)
+                        formattedText.appendLine(current)
                         appendIndent(formattedText, indentCount)
                         return
                     }
@@ -85,7 +85,7 @@ class JsonFormatter {
                         return
                     }
                     REMOVE_INDENT_TRIGGERS.contains(current) -> {
-                        formattedText.appendln()
+                        formattedText.appendLine()
                         indentCount -= 1
                         appendIndent(formattedText, indentCount)
                         formattedText.append(current)
