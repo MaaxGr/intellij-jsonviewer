@@ -1,6 +1,6 @@
 import com.maaxgr.intellij.jsonviewer.JsonFormatter
+import org.junit.Assert.assertEquals
 import org.junit.Test
-import kotlin.test.assertEquals
 
 class JsonFormatterTest {
 
@@ -66,35 +66,5 @@ class JsonFormatterTest {
 
         assertEquals(expectedString, formattedString)
     }
-
-    @Test
-    fun reset() {
-        val formatter = JsonFormatter()
-
-        val testString = """
-            {
-              "quiz":{
-                "sport":{
-                  "q1":{
-                    "question":"Which one is correct team name in NBA?",
-                    "options":[
-                      "New York \"Bulls",
-                      "Los Angeles {Kings",
-                      "Golden State Warriros",
-                      "Huston Rocket"
-                    ],
-                    "answer":"Huston Rocket"
-                  }
-                }
-              }
-            }
-        """.trimIndent()
-
-        val result = formatter.resetString(testString)
-
-
-        println(result)
-    }
-
 
 }

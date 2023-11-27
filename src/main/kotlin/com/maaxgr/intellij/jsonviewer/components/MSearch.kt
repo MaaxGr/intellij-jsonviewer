@@ -1,10 +1,7 @@
 package com.maaxgr.intellij.jsonviewer.components
 
 import com.intellij.CommonBundle
-import com.intellij.openapi.actionSystem.ActionManager
-import com.intellij.openapi.actionSystem.AnActionEvent
-import com.intellij.openapi.actionSystem.IdeActions
-import com.intellij.openapi.actionSystem.ToggleAction
+import com.intellij.openapi.actionSystem.*
 import com.intellij.ui.DocumentAdapter
 import com.intellij.ui.SearchTextField
 import com.maaxgr.intellij.jsonviewer.MComponent
@@ -77,6 +74,11 @@ class MSearch(
         override fun setSelected(e: AnActionEvent, state: Boolean) {
             escapeAction()
         }
+
+        override fun getActionUpdateThread(): ActionUpdateThread {
+            return ActionUpdateThread.EDT
+        }
+
     }
 
 }

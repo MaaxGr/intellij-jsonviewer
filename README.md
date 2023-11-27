@@ -11,3 +11,7 @@ from their [marketplace](https://plugins.jetbrains.com/plugin/14149-json-viewer)
 
 ## Screencast
 ![screencast](docs/screencast.gif)
+
+# Credits
+
+* [Bootstrap Icons](https://icons.getbootstrap.com/icons/filetype-json/)

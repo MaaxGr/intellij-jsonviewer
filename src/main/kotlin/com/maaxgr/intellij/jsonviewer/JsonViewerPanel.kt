@@ -1,12 +1,13 @@
 package com.maaxgr.intellij.jsonviewer
 
-import com.google.gson.Gson
-import com.google.gson.JsonElement
-import com.google.gson.stream.MalformedJsonException
 import com.intellij.openapi.project.Project
+import com.intellij.ui.JBColor
 import com.maaxgr.intellij.jsonviewer.components.MEditor
 import com.maaxgr.intellij.jsonviewer.components.MSearch
+import kotlinx.serialization.SerializationException
+import kotlinx.serialization.json.Json
 import java.awt.BorderLayout
+import java.awt.Color
 import java.awt.GridLayout
 import java.awt.event.KeyEvent
 import javax.swing.BoxLayout
@@ -36,6 +37,7 @@ class JsonViewerPanel(project: Project) : JPanel(BorderLayout()) {
 
         //error label
         lblError = JLabel()
+        lblError.foreground = JBColor.RED
         val lblPanel = JPanel().apply {
             layout = GridLayout()
             add(lblError)
@@ -90,8 +92,8 @@ class JsonViewerPanel(project: Project) : JPanel(BorderLayout()) {
         val newText = formatText.replace("(\\n)".toRegex(), "")
 
         try {
-            Gson().getAdapter(JsonElement::class.java).fromJson(newText)
-        } catch (ee: MalformedJsonException) {
+            Json.parseToJsonElement(newText)
+        } catch (ee: SerializationException) {
             lblError.text = "Invalid JSON text"
         }
 

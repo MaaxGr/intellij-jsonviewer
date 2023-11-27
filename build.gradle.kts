@@ -1,18 +1,19 @@
 plugins {
-    id("org.jetbrains.intellij") version "1.13.0"
+    id("org.jetbrains.intellij") version "1.16.0"
     id("java")
-    kotlin("jvm") version "1.7.21"
+    kotlin("jvm") version "1.9.21"
 }
 
 group = "com.maaxgr.intellij"
-version = "1.0.17"
+version = "1.0.18"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation("junit", "junit", "4.12")
+    testImplementation("junit:junit:4.13.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.1")
 }
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
@@ -21,8 +22,9 @@ intellij {
     updateSinceUntilBuild.set(false)
 }
 
-configure<JavaPluginConvention> {
+java {
     sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 tasks.buildSearchableOptions {
