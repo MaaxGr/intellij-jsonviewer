@@ -91,6 +91,11 @@ class JsonViewerPanel(project: Project) : JPanel(BorderLayout()) {
 
         val newText = formatText.replace("(\\n)".toRegex(), "")
 
+        if (newText.isBlank()) {
+            lblError.text = "Empty JSON text"
+            return
+        }
+
         try {
             Json.parseToJsonElement(newText)
         } catch (ee: SerializationException) {
